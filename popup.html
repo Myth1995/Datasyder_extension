@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <style>
+      #text1 {
+        font-size: 20px;
+        font-weight: bold;
+        display:none;
+        border-bottom: red solid 6px;
+        margin-bottom: 5px;
+      }
+      #companydetail{
+          display:none;
+      }
+      #employeedetail{
+          display:none;
+      }
+      .employeerinfo{
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .companyinfo{
+          font-size:15px;
+      }
+      
+      tr {
+        height: 30px;
+      }
+      #showdetail {
+        text-align: center;
+        font-size: 17px;
+        font-weight: bold;
+        color: aliceblue;
+        background-color: blue;
+        border-radius: 0px;
+        width: 350px;
+        padding: 10px 30px 10px 30px;
+        margin: 3px 3px 3px 0px;
+      }
+      #showdetail1 {
+        text-align: center;
+        font-size: 17px;
+        font-weight: bold;
+        color: aliceblue;
+        background-color: blue;
+        border-radius: 0px;
+        width: 350px;
+        padding: 10px 30px 10px 30px;
+        margin: 3px 3px 3px 0px;
+      }
+	  img{
+	   width:25px;
+	   vertical-align:middle;
+	  }
+	  .fade{
+	    animation-name: fade;
+		animation-duration: 2s;
+		animation-delay: 0s;
+	  }
+	  .bodyanimation{
+	    animation-name: height;
+		animation-duration: 1s;
+		animation-delay: 0s;
+	  }
+	  @keyframes fade{
+		0%   {opacity:0;}
+		40%   {opacity:0;}
+		100% {opacity:1;}
+		}
+	  @keyframes height{
+		0%   {height:0PX;}
+		100% {height:400px;}
+		}
+		#showdetail{
+			border:none;
+			outline: none;
+			box-shadow: 0 3px 5px #999;
+			border-radius:10px;
+		}
+		#showdetail:hover{
+			border:none;
+			
+		}
+		#showdetail:onfocus{
+			border:none;
+		}
+		#showdetail:active {		
+			border:none;
+			box-shadow: 0 1px 5px #666;
+			transform: translateY(2px);
+		}
+		
+    </style>
+  </head>
+  <body id="body">
+	<div id="logobtn" class="fade">
+	<span id="verifynum" style="position:absolute;background-color:red;color:white;left:18px;top:18px;font-size:15px;border-radius:20px;padding:3px 9px 3px 9px" >0</span>
+	<img src="images/logo.png" style="width:120px"></div>
+	  <div id="main" style="display:none">
+      <div>
+        <div id="text1" style="display:none" >
+          Mark Jordan
+        </div>
+      </div>
+      <table id="employeedetail" class="employeerinfo">
+        <tr>
+          <td width="100"><img src="icons/iconemail.png"> Email 1:</td>
+          <td>
+            <span id="email1"> m*****@micosoft.com </span>
+          </td>
+        </tr>
+        <tr>
+          <td width="100"><img src="icons/iconemail.png"> Email 2:</td>
+          <td>
+            <span id="email2"> m*****@gmail.com </span>
+          </td>
+        </tr>
+        <tr>
+          <td width="100"><img src="icons/iconphone.png"> Phone 1:</td>
+          <td>
+            <span id="phone1"> +1.866. *** ***** </span>
+          </td>
+        </tr>
+        <tr>
+          <td width="100"><img src="icons/iconphone.png"> Phone 2:</td>
+          <td>
+            <span id="phone2"> +1.962. *** **** </span>
+          </td>
+        </tr>
+      </table>
+      <button id="showdetail" style="display:none" >Show contact</button>
+	  <div id="companydetail">
+      <p>
+        <div><img src="icons/iconcompany.png"> Company Name:</div>
+        <div id="companyname" style="margin:0px 0px 0px 30px">Microsoft inc.</div>
+      </p>
+      <p class="companyinfo hidden">
+        <div><img src="icons/iconwebsite.png"> Company Website:</div>
+        <div id="companywebsite" style="margin:0px 0px 0px 30px">www.microsoft.com</div>
+      </p>
+      <p class="companyinfo hidden">
+        <div><img src="icons/iconlocate.png"> HQ Address:</div>
+        <div id="hqaddress" style="margin:0px 0px 0px 30px">2505 South Finaly Road,San Francisco,ll,60148</div>
+      </p>
+      <p class="companyinfo hidden">
+        <div><img src="icons/iconlocate.png"> Country:</div>
+        <div id="lcountry" style="margin:0px 0px 0px 30px">United State</div>
+      </p>
+      <p class="companyinfo hidden">
+        <div><img src="icons/iconsession.png"> Primary Industr:</div>
+        <div id="primaryindustry" style="margin:0px 0px 0px 30px">Internet,Software</div>
+      </p>
+      <p class="companyinfo hidden">
+        <div><img src="icons/iconmony.png"> Company Revenue:</div>
+        <div id="companyrevenue" style="margin:0px 0px 0px 30px">$80B-$120B</div>
+      </p>
+      <p class="companyinfo hidden">
+        <div><img src="icons/iconuser.png"> Number of Employees:</div>
+        <div id="numberofemployees" style="margin:0px 0px 0px 30px">160,256</div>
+      </p>
+      <p class="companyinfo hidden">
+        <div><img src="icons/iconcalenda.png"> Founded Year:</div>
+        <div id="foundedyear" style="margin:0px 0px 0px 30px">1986</div>
+      </p>
+      <p class="companyinfo hidden">
+        <div><img src="icons/iconbusiness.png"> Business Model:</div>
+        <div id="businessmodel" style="margin:0px 0px 0px 30px">B2B,B2C</div>
+      </p>
+      <p class="companyinfo hidden">
+        <div>Social media:</div>
+        <div id="socialmedia" style="margin:5px 10px 5px 30px"> <img src="icons/socialmediaicon.png" style="width:25px;height:25px"></div>
+      </p>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+  <html></html>
+</html>
