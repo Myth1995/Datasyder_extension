@@ -13,6 +13,7 @@ chrome.webNavigation.onBeforeNavigate.addListener(function () {
       var url1 = new URL(url);
       var path = url1.hostname + url1.pathname;
       if (path[0] == "w") path = path.slice(4, path.length - 1);
+      path = "linkedin.com/in/kennarddbrown";
       var request = new XMLHttpRequest();
       // alert('http://datasyder.com/plugininfo.php?hosturl=' + path)
       request.open(
