@@ -10,7 +10,7 @@ imgbtn.innerHTML =
   '<div id="logobtn" class="fade">' +
   '	<span id="verifynum" style="position:absolute;background-color:red;color:white;right:5px;top:5px;font-size:15px;border-radius:20px;padding:3px 9px 3px 9px" >0</span>' +
   '	<img src="images/logo.png" class="img" id="logoimg" style="width:90px;height:90px;shadow:grey 2px 2px"></div>' +
-  '<div id="main" class=" fade" style="display:none;max-height:700px;overflow:auto">' +
+  '<div id="mainPanel" class=" fade" style="display:none;max-height:700px;overflow:auto;background-color: white; border-radius: 10px;">' +
   '<div id="closebutton" style="border-radius:30px;border:solid 1px rgba(0,0,0,0.2);position:absolute;top:20px;right:20px;padding:1px 6px 1px 6px "><img class="img" src="icons/iconclose.png" style="width:25px;vertical-align:middle"></div>' +
   '     <div id="text1" style="font-size: 19px;font-weight: bold;display:none;border-bottom: rgba(255,0,0,1) solid 4px;margin-bottom: 5px;">' +
   "      Mark Jordan" +
@@ -108,7 +108,7 @@ for (var i = 0; i < imgs.length; i++) {
 
 /////////////////
 
-let showdatabody = document.getElementById("main");
+let showdatabody = document.getElementById("mainPanel");
 let fullname = document.getElementById("text1");
 let email1 = document.getElementById("email1");
 let email2 = document.getElementById("email2");
@@ -180,9 +180,9 @@ copybutton4.onclick = function (element) {
 
 //////////////////////
 var pageUrl = window.location.href;
-// pageUrl = pageUrl.slice(4, pageUrl.length-1)
-pageUrl = "linkedin.com/in/kennarddbrown";
-// console.log(pageUrl);
+pageUrl = pageUrl.slice(12, pageUrl.length-1)
+// pageUrl = "linkedin.com/in/kennarddbrown";
+console.log(pageUrl);
 chrome.runtime.sendMessage(
   { greeting: "senddata", path: pageUrl},
   function (response) {}
@@ -276,8 +276,8 @@ logobtn.onclick = function (element) {
     if (data["CompanyName"] == "") {
     } else {
       logobtn.style.display = "none";
-      document.getElementById("main").style.padding = "20px 25px 10px 25px";
-      document.getElementById("main").style.display = "block";
+      document.getElementById("mainPanel").style.padding = "20px 25px 10px 25px";
+      document.getElementById("mainPanel").style.display = "block";
       // alert(document.getElementById("main").style.display)
       document.getElementById("text1").style.display = "inline-block";
       document.getElementById("employeedetail").style.display = "block";
