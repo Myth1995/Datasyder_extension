@@ -179,9 +179,18 @@ copybutton4.onclick = function (element) {
 };
 
 //////////////////////
+var pageUrl = window.location.href;
+// pageUrl = pageUrl.slice(4, pageUrl.length-1)
+pageUrl = "linkedin.com/in/kennarddbrown";
+// console.log(pageUrl);
+chrome.runtime.sendMessage(
+  { greeting: "senddata", path: pageUrl},
+  function (response) {}
+);
+
 var data, data1;
 var flagnum = 0;
-var signed = false;
+var signed = true;
 var useremail = "davidmcu18@gmail.com";
 //////////////////
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
@@ -221,7 +230,7 @@ function ValidateEmail(mail) {
 /////////////////
 document.getElementById("logincheck").onclick = function () {
   if (ValidateEmail(useremail)) {
-    document.getElementById("span").innerHTML = "Please Enter Invalid Email";
+    document.getElementById("span").innerHTML = "Please Enter valid Email";
   } else {
     document.getElementById("span").innerHTML = "";
     document.getElementById("loginpage").style.display = "none";
@@ -260,9 +269,9 @@ logobtn.onclick = function (element) {
       { greeting: "checksign" },
       function (response) {}
     );
-    /*	logobtn.style.display='none';
+    	logobtn.style.display='none';
 			document.getElementById("loginpage").style.display="block";
-		*/
+		
   } else {
     if (data["CompanyName"] == "") {
     } else {
